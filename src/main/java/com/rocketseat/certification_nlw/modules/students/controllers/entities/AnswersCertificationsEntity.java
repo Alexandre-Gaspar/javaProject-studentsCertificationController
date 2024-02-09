@@ -27,8 +27,8 @@ public class AnswersCertificationsEntity {
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
 
-    @JoinColumn(name = "certification_id")
-    private UUID  certificationID;
+    @Column(name = "certification_id")
+    private UUID certificationID;
 
     @ManyToOne
     @JoinColumn(name = "certification_id", insertable = false, updatable = false)
@@ -51,6 +51,6 @@ public class AnswersCertificationsEntity {
     private boolean isCorrect;
 
     @CreationTimestamp
-    private LocalDateTime createAt;
+    private LocalDateTime createdAt;
 
 }
